@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en_us" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+  <creator>
+    <name>SplatDev Ltda</name>
+    <link>https://splatdev.com</link>
+  </creator>
+  <area alias="labels">
+    <key alias="plugintitle">Title</key>
+  </area>
+</language>

@@ -1,24 +1,36 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
 using System.IO.Compression;
+using System.Net;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Web.Configuration;
 using System.Web.Hosting;
 using System.Web.Mvc;
 
-using Umbraco.Web.Mvc;
+using Umbraco.Plugins.Backups.Models;
+using Umbraco.Web.WebApi;
 
 namespace development.camtc.org.App_Code
 {
-    public class BackupController : SurfaceController
+    public class BackupController : UmbracoAuthorizedApiController
     {
         private readonly string path;
         private readonly string destinationZip;
         private readonly string destinationDb;
-        private const string DatabaseNameLocal = "camtc";
-        private const string DatabaseNameDev = "CAMTD-DEV";
-        private const string DatabaseName = "D-Dev";
+        private readonly SqlConnection sqlConnection;
+        public SqlConnectionDetails SqlConnectionDetails { get; private set; }
         public BackupController()
         {
+            sqlConnection = GetSqlConnection();
+            SqlConnectionDetails = new SqlConnectionDetails
+            {
+                ConnectionString = sqlConnection.ConnectionString,
+                Database = sqlConnection.Database,
+                Server = sqlConnection.DataSource
+            };
             path = HostingEnvironment.MapPath("~/");
             destinationZip = Path.Combine(path, "../Backup/BackupFiles.zip");
             destinationDb = Path.Combine(path, "../Backup/BackupDb.bak");
@@ -28,31 +40,107 @@ namespace development.camtc.org.App_Code
             }
         }
 
-        public void FullBackup()
+        [HttpGet]
+        public async Task<SqlConnectionDetails> GetBackupDetails()
         {
-            if (System.IO.File.Exists(destinationZip))
-            {
-                System.IO.File.Delete(destinationZip);
-            }
-            ZipFile.CreateFromDirectory(path, destinationZip);
-            var conn = ConfigurationManager.ConnectionStrings["umbracoDbDSN"].ConnectionString;
-
-            SqlConnection Connection = new SqlConnection(conn);
-            SqlCommand command;
-
-            command = new SqlCommand("backup database " + DatabaseNameDev + " to disk ='" + destinationDb + "' with init,stats=10", Connection);
-            Connection.Open();
-            command.ExecuteNonQuery();
-            Connection.Close();
+            await Task.FromResult(0);
+            return SqlConnectionDetails;
         }
 
-        public FileResult BackupFiles()
+        [HttpPost]
+        public async Task<bool> FilesBackup()
+        {
+            await Task.FromResult(0);
+
+            if (File.Exists(destinationZip))
+            {
+                File.Delete(destinationZip);
+            }
+            ZipFile.CreateFromDirectory(path, destinationZip);
+
+            return true;
+        }
+
+        [HttpPost]
+        public async Task<bool> DatabaseBackup()
+        {
+            if (sqlConnection is null)
+            {
+                //Db file will be backed up along with the files
+                return true;
+            }
+
+            SqlCommand command = new SqlCommand("backup database " + sqlConnection.Database + " to disk ='" + destinationDb + "' with init,stats=10", sqlConnection);
+            sqlConnection.Open();
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+            await Task.FromResult(0);
+            return true;
+        }
+
+        [HttpPost]
+        public async Task<Response> FullBackup()
+        {
+            try
+            {
+                var success = await FilesBackup();
+                success = success && await DatabaseBackup();
+
+                if (success)
+                {
+                    return new Response
+                    {
+                        StatusCode = HttpStatusCode.OK,
+                        Success = true
+                    };
+                }
+                else
+                {
+                    return new Response
+                    {
+                        StatusCode = HttpStatusCode.BadRequest,
+                        Success = false
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new Response
+                {
+                    Details = ex,
+                    Message = ex.Message,
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Success = false
+                };
+            }
+        }
+
+        [HttpGet]
+        public FileResult DownloadBackupFiles()
         {
             return new FilePathResult(destinationZip, "application/zip, application/octet-stream, application/x-zip-compressed, multipart/x-zip");
         }
-        public FileResult BackupDb()
+
+        [HttpGet]
+        public FileResult DownloadBackupDb()
         {
             return new FilePathResult(destinationDb, "application/octet-stream");
         }
+
+        #region Helpers
+        private string GetConnectionString()
+        {
+            Configuration configuration = WebConfigurationManager.OpenWebConfiguration("~");
+            ConnectionStringSettings connStringSettings = configuration.ConnectionStrings.ConnectionStrings["umbracoDbDSN"];
+            return connStringSettings.ConnectionString;
+        }
+
+        private SqlConnection GetSqlConnection()
+        {
+            var connectionString = GetConnectionString();
+            if (connectionString.Contains("|DataDirectory|")) return null;
+            return new SqlConnection(connectionString);
+        }
+        #endregion
     }
 }
