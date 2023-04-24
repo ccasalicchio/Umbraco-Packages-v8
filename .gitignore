@@ -33,3 +33,5 @@
 /Umbraco.Plugins.DefaultValue/bin/Debug
 /Umbraco.Plugins.AdPreview/bin/Debug
 /Umbraco.Plugins.AdPreview/obj/Debug
+/Umbraco.Plugins.Backups/obj/Debug
+/Umbraco.Plugins.Backups/bin/Debug

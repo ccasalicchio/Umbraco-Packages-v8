@@ -1,0 +1,22 @@
+{
+  "propertyEditors": [
+    {
+      "alias": "splatDev.SiteBackup",
+      "name": "Site Backup",
+      "icon": "icon-zip",
+      "editor": {
+        "hideLabel": true,
+        "view": "~/App_Plugins/SiteBackup/views/view.html"
+      }
+    }
+  ],
+
+  "javascript": [
+    "~/App_Plugins/SiteBackup/js/controller.js",
+    "~/App_Plugins/SiteBackup/js/edit.controller.js"
+  ],
+
+  "css": [
+    "~/App_Plugins/SiteBackup/css/style.css"
+  ]
+}
