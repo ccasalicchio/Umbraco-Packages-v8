@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.AdPreview",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.CharLimit", "Umbraco.Plugins.CharLimit\Umbraco.Plugins.CharLimit.csproj", "{D155D6A7-A5CB-4373-8FAE-968BCF9B8351}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.DefaultValue", "Umbraco.Plugins.DefaultValue\Umbraco.Plugins.DefaultValue.csproj", "{9A66DA45-73E4-4D65-8584-D58E397274D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{D155D6A7-A5CB-4373-8FAE-968BCF9B8351}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D155D6A7-A5CB-4373-8FAE-968BCF9B8351}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D155D6A7-A5CB-4373-8FAE-968BCF9B8351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A66DA45-73E4-4D65-8584-D58E397274D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A66DA45-73E4-4D65-8584-D58E397274D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A66DA45-73E4-4D65-8584-D58E397274D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A66DA45-73E4-4D65-8584-D58E397274D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
