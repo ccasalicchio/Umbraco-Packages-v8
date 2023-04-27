@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F318336-EBDD-4D6F-811D-BC3B0F07AACA}</ProjectGuid>
+    <ProjectGuid>{410FC685-0C45-498D-9ECF-A5B91F2144B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Umbraco.Plugins.AdPreview</RootNamespace>
@@ -45,12 +45,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\AdPreview\css\style.scss" />
-    <Content Include="App_Plugins\AdPreview\package.manifest" />
-    <Content Include="README.md" />
-    <Content Include="Umbraco.Plugins.AdPreview.nuspec" />
-    <Content Include="Views\Example-AdPreview.cshtml" />
-    <Content Include="Views\Partials\_Ad.cshtml" />
+    <None Include="App_Plugins\AdPreview\css\style.scss" />
+    <None Include="App_Plugins\AdPreview\package.manifest" />
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+    <None Include="Umbraco.Plugins.AdPreview.nuspec" />
+    <None Include="Views\Example-AdPreview.cshtml" />
+    <None Include="Views\Partials\_Ad.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Plugins\AdPreview\css\style.css" />

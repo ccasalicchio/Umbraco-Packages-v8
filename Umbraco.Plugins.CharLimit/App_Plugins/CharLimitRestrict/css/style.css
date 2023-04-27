@@ -1,0 +1,26 @@
+﻿.input-limit .counter {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    font-size: 0.85rem;
+    font-weight: 400;
+    padding: 5px 10px;
+    transition: all 0.4s ease-in-out;
+    box-sizing: border-box;
+    color: #fff;
+    margin: 12px 0;
+}
+
+.input-limit .thumb-up {
+    background: #39d38b;}
+
+.input-limit .alert {
+  background: #B8860B;
+  margin-bottom: 0 !important; }
+
+.input-limit .stop-hand {
+  background: #ff0000; }
+input.umb-editor.umb-textstring.textstring {
+    width: 80.2%;
+    margin:0 180px;
+}

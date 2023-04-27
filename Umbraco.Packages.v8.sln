@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33423.256
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.DefaultValue", "Umbraco.Plugins.DefaultValue\Umbraco.Plugins.DefaultValue.csproj", "{EAF810D5-A835-47B3-AD0E-0507A38D1406}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Cms.Web.v8.18.7", "Umbraco.Cms.Web.v8.18.7\Umbraco.Cms.Web.v8.18.7.csproj", "{BFEE8D22-6DE7-4B71-B4DC-0659CA65105F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{7EA35925-1234-4676-A853-85F4A68DBF59}"
@@ -17,9 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		tools\Theme XML Generator.exe = tools\Theme XML Generator.exe
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.AdPreview", "Umbraco.Plugins.AdPreview\Umbraco.Plugins.AdPreview.csproj", "{0F318336-EBDD-4D6F-811D-BC3B0F07AACA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.AdPreview", "Umbraco.Plugins.AdPreview\Umbraco.Plugins.AdPreview.csproj", "{410FC685-0C45-498D-9ECF-A5B91F2144B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.Backups", "Umbraco.Plugins.Backups\Umbraco.Plugins.Backups.csproj", "{7B81244B-4297-4F9A-AF7B-46AE1D969BF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.CharLimit", "Umbraco.Plugins.CharLimit\Umbraco.Plugins.CharLimit.csproj", "{D155D6A7-A5CB-4373-8FAE-968BCF9B8351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.DefaultValue", "Umbraco.Plugins.DefaultValue\Umbraco.Plugins.DefaultValue.csproj", "{9A66DA45-73E4-4D65-8584-D58E397274D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,22 +27,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EAF810D5-A835-47B3-AD0E-0507A38D1406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EAF810D5-A835-47B3-AD0E-0507A38D1406}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EAF810D5-A835-47B3-AD0E-0507A38D1406}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EAF810D5-A835-47B3-AD0E-0507A38D1406}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BFEE8D22-6DE7-4B71-B4DC-0659CA65105F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BFEE8D22-6DE7-4B71-B4DC-0659CA65105F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFEE8D22-6DE7-4B71-B4DC-0659CA65105F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFEE8D22-6DE7-4B71-B4DC-0659CA65105F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F318336-EBDD-4D6F-811D-BC3B0F07AACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F318336-EBDD-4D6F-811D-BC3B0F07AACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F318336-EBDD-4D6F-811D-BC3B0F07AACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F318336-EBDD-4D6F-811D-BC3B0F07AACA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B81244B-4297-4F9A-AF7B-46AE1D969BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B81244B-4297-4F9A-AF7B-46AE1D969BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B81244B-4297-4F9A-AF7B-46AE1D969BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B81244B-4297-4F9A-AF7B-46AE1D969BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{410FC685-0C45-498D-9ECF-A5B91F2144B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{410FC685-0C45-498D-9ECF-A5B91F2144B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{410FC685-0C45-498D-9ECF-A5B91F2144B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{410FC685-0C45-498D-9ECF-A5B91F2144B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D155D6A7-A5CB-4373-8FAE-968BCF9B8351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D155D6A7-A5CB-4373-8FAE-968BCF9B8351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D155D6A7-A5CB-4373-8FAE-968BCF9B8351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D155D6A7-A5CB-4373-8FAE-968BCF9B8351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A66DA45-73E4-4D65-8584-D58E397274D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A66DA45-73E4-4D65-8584-D58E397274D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A66DA45-73E4-4D65-8584-D58E397274D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A66DA45-73E4-4D65-8584-D58E397274D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

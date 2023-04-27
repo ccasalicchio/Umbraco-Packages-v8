@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h5>Ad Preview</h5>
-        @Html.Partial("Partials/_Ad")
+        @Html.Partial("Partials/_Ad", Model.Content.GetPropertyValue<string>("imageAd"))
     </div>
 </body>
 </html>

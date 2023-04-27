@@ -1,8 +1,7 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@model string
 @using Newtonsoft.Json;
 @{
-    var adData = Model.Content.GetPropertyValue<string>("imageAd");
-    Umbraco.Plugins.AdPreview.Models.AdViewModel ad = !string.IsNullOrEmpty(adData) ? JsonConvert.DeserializeObject<Umbraco.Plugins.AdPreview.Models.AdViewModel>(adData) : null;
+    Umbraco.Plugins.AdPreview.Models.AdViewModel ad = !string.IsNullOrEmpty(Model) ? JsonConvert.DeserializeObject<Umbraco.Plugins.AdPreview.Models.AdViewModel>(Model) : null;
 }
 @if (ad != null && !string.IsNullOrEmpty(ad.Img))
 {

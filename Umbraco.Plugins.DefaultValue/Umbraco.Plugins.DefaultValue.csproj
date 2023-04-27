@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EAF810D5-A835-47B3-AD0E-0507A38D1406}</ProjectGuid>
+    <ProjectGuid>{9A66DA45-73E4-4D65-8584-D58E397274D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Umbraco.Plugins.DefaultValue</RootNamespace>
@@ -44,16 +44,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Plugins\DefaultValue\package.manifest" />
-    <None Include="README.md" />
-    <None Include="SplatDev.Umbraco.Plugins.DefaultValue.nuspec" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_Plugins\DefaultValue\css\style.css" />
     <Content Include="App_Plugins\DefaultValue\js\controller.js" />
     <Content Include="App_Plugins\DefaultValue\views\view.html" />
     <Content Include="icon.png" />
     <Content Include="readme.txt" />
+    <Content Include="Umbraco.Plugins.DefaultValue.csproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Plugins\DefaultValue\package.manifest" />
+    <None Include="README.md" />
+    <None Include="SplatDev.Umbraco.Plugins.DefaultValue.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
