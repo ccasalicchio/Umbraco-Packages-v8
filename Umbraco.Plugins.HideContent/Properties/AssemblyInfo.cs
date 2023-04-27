@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Umbraco.Plugins.DefaultValue")]
-[assembly: AssemblyDescription("This Property Editor is a simple copy button that copies one or many values from a property into another property. Useful when you have more than one property with the same purpose, but that may or may not be the same value. Minimizes duplication of work. Ex. When you want an article title to replicate into the meta title.")]
+[assembly: AssemblyTitle("Umbraco.Plugins.HideContent")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SplatDev Ltda")]
-[assembly: AssemblyProduct("Umbraco.Plugins.DefaultValue")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Umbraco.Plugins.HideContent")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("eaf810d5-a835-47b3-ad0e-0507a38d1406")]
+[assembly: Guid("80e18a00-b3c7-4dec-b397-a3837de606ee")]
 
 // Version information for an assembly consists of the following four values:
 //
