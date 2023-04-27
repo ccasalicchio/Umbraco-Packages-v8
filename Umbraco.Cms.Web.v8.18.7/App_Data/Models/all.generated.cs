@@ -6,7 +6,7 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "3eaacccfc83fc262")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4cc940680680a864")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
@@ -116,6 +116,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("propertyB")]
 		public virtual string PropertyB => this.Value<string>("propertyB");
+
+		///<summary>
+		/// Restrict Page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("restrictPage")]
+		public virtual object RestrictPage => this.Value("restrictPage");
 	}
 
 	/// <summary>Folder</summary>
