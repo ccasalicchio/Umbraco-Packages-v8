@@ -329,6 +329,10 @@
     <Content Include="App_Plugins\HideContent\lang\en-US.xml" />
     <Content Include="App_Plugins\HideContent\lang\pt-BR.xml" />
     <Content Include="App_Plugins\HideContent\views\view.html" />
+    <Content Include="App_Plugins\OnOffButton\css\style.css" />
+    <Content Include="App_Plugins\OnOffButton\css\style.min.css" />
+    <Content Include="App_Plugins\OnOffButton\js\controller.js" />
+    <Content Include="App_Plugins\OnOffButton\views\view.html" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -376,6 +380,8 @@
     <Content Include="App_Plugins\CopyValue\package.manifest" />
     <Content Include="App_Plugins\HideContent\css\styles.scss" />
     <Content Include="App_Plugins\HideContent\package.manifest" />
+    <Content Include="App_Plugins\OnOffButton\css\style.scss" />
+    <Content Include="App_Plugins\OnOffButton\package.manifest" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />

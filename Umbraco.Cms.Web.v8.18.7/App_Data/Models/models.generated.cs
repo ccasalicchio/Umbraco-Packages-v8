@@ -17,7 +17,7 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "18ddb586f2af7600")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "3eaacccfc83fc262")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
@@ -74,6 +74,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("hideContent")]
 		public virtual object HideContent => this.Value("hideContent");
+
+		///<summary>
+		/// On-Off Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("onOffButton")]
+		public virtual object OnOffButton => this.Value("onOffButton");
 
 		///<summary>
 		/// Preview

@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.CopyValue",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.HideContent", "Umbraco.Plugins.HideContent\Umbraco.Plugins.HideContent.csproj", "{80E18A00-B3C7-4DEC-B397-A3837DE606EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.OnOffButton", "Umbraco.Plugins.OnOffButton\Umbraco.Plugins.OnOffButton.csproj", "{5EF84304-DFD5-4BCB-B25E-FFC38E066732}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{80E18A00-B3C7-4DEC-B397-A3837DE606EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80E18A00-B3C7-4DEC-B397-A3837DE606EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80E18A00-B3C7-4DEC-B397-A3837DE606EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF84304-DFD5-4BCB-B25E-FFC38E066732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF84304-DFD5-4BCB-B25E-FFC38E066732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF84304-DFD5-4BCB-B25E-FFC38E066732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF84304-DFD5-4BCB-B25E-FFC38E066732}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
