@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Umbraco.Plugins.DefaultValue")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This Property Editor is a simple copy button that copies one or many values from a property into another property. Useful when you have more than one property with the same purpose, but that may or may not be the same value. Minimizes duplication of work. Ex. When you want an article title to replicate into the meta title.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("SplatDev Ltda")]
 [assembly: AssemblyProduct("Umbraco.Plugins.DefaultValue")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]

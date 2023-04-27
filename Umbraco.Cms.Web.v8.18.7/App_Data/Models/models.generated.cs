@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "774d411b6f487132")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4cc940680680a864")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -55,6 +55,13 @@ namespace Umbraco.Web.PublishedModels
 		public virtual object CharLimit => this.Value("charLimit");
 
 		///<summary>
+		/// Copy Value
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("copyValue")]
+		public virtual object CopyValue => this.Value("copyValue");
+
+		///<summary>
 		/// Default Value
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
@@ -62,11 +69,46 @@ namespace Umbraco.Web.PublishedModels
 		public virtual object DefaultValue => this.Value("defaultValue");
 
 		///<summary>
+		/// Hide Content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("hideContent")]
+		public virtual object HideContent => this.Value("hideContent");
+
+		///<summary>
+		/// On-Off Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("onOffButton")]
+		public virtual object OnOffButton => this.Value("onOffButton");
+
+		///<summary>
 		/// Preview
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("preview")]
 		public virtual object Preview => this.Value("preview");
+
+		///<summary>
+		/// propertyA
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("propertyA")]
+		public virtual string PropertyA => this.Value<string>("propertyA");
+
+		///<summary>
+		/// propertyB
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("propertyB")]
+		public virtual string PropertyB => this.Value<string>("propertyB");
+
+		///<summary>
+		/// Restrict Page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("restrictPage")]
+		public virtual object RestrictPage => this.Value("restrictPage");
 	}
 
 	/// <summary>Folder</summary>
