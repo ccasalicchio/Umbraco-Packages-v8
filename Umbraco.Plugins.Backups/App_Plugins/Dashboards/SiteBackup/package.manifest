@@ -2,7 +2,7 @@
   "dashboards": [
     {
       "alias": "splatDev.SiteBackup",
-      "view": "/App_Plugins/Dashboards/SiteBackup/dashboard.html",
+      "view": "/App_Plugins/Dashboards/SiteBackup/views/dashboard.html",
       "sections": [ "settings" ],
       "weight": -10,
       "access": [
@@ -14,7 +14,7 @@
 
   "javascript": [
     "~/App_Plugins/Dashboards/SiteBackup/js/controller.js",
-    "~/App_Plugins/Dashboards/SiteBackup/js/edit.controller.js"
+    "~/App_Plugins/Dashboards/SiteBackup/js/filters.js"
   ],
 
   "css": [

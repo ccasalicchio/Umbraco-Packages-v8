@@ -380,16 +380,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BackupController.cs" />
+    <Compile Include="Extensions\ZipExtensions.cs" />
+    <Compile Include="Models\BackupPerformedDetails.cs" />
     <Compile Include="Models\Response.cs" />
-    <Compile Include="Models\SqlConnectionDetails.cs" />
+    <Compile Include="Models\BackupDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\Dashboards\SiteBackup\css\style.css" />
-    <Content Include="App_Plugins\Dashboards\SiteBackup\css\style.min.css" />
+    <Content Include="App_Plugins\Dashboards\SiteBackup\css\style.css">
+      <DependentUpon>style.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Plugins\Dashboards\SiteBackup\css\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
     <Content Include="App_Plugins\Dashboards\SiteBackup\js\controller.js" />
     <Content Include="App_Plugins\Dashboards\SiteBackup\js\edit.controller.js" />
+    <Content Include="App_Plugins\Dashboards\SiteBackup\js\filters.js" />
     <Content Include="App_Plugins\Dashboards\SiteBackup\Lang\en-US.xml" />
+    <Content Include="App_Plugins\Dashboards\SiteBackup\views\dashboard.html" />
     <Content Include="App_Plugins\Dashboards\SiteBackup\views\edit.html" />
     <Content Include="App_Plugins\Dashboards\SiteBackup\views\view.html" />
     <Content Include="Dependencies\System.IO.Compression.dll" />
@@ -397,9 +405,7 @@
     <Content Include="icon.png" />
     <Content Include="readme.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Components\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <Content Include="App_Plugins\Dashboards\SiteBackup\css\style.scss" />

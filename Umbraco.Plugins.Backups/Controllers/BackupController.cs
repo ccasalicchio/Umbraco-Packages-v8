@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
-using System.Text.RegularExpressions;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web.Configuration;
 using System.Web.Hosting;
@@ -17,34 +17,90 @@ namespace development.camtc.org.App_Code
 {
     public class BackupController : UmbracoAuthorizedApiController
     {
-        private readonly string path;
-        private readonly string destinationZip;
-        private readonly string destinationDb;
+        public string DestinationPath { get; private set; }
+        public string RootPath { get; private set; }
+        public string DatabasePath { get; private set; }
+        public string FilesPath { get; private set; }
         private readonly SqlConnection sqlConnection;
-        public SqlConnectionDetails SqlConnectionDetails { get; private set; }
+        private const string backupFolder = "Media";
+        private const string files = "Files_{0}.files.zip";
+        private const string database = "Database_{0}__{1}.bak";
+        private const string TIMESTAMP = "DATE--yyyy-MM-dd---HH-mm-ss";
+        private const string MEDIA_VIRTUAL_PATH = "/media/";
+        public BackupDetails BackupDetails { get; private set; }
         public BackupController()
         {
             sqlConnection = GetSqlConnection();
-            SqlConnectionDetails = new SqlConnectionDetails
+
+            RootPath = HostingEnvironment.MapPath("~/");
+            DestinationPath = Path.Combine(RootPath, backupFolder);
+            DatabasePath = Path.Combine(DestinationPath, database);
+            FilesPath = Path.Combine(DestinationPath, files);
+
+            if (!Directory.Exists(DestinationPath))
             {
-                ConnectionString = sqlConnection.ConnectionString,
-                Database = sqlConnection.Database,
-                Server = sqlConnection.DataSource
-            };
-            path = HostingEnvironment.MapPath("~/");
-            destinationZip = Path.Combine(path, "../Backup/BackupFiles.zip");
-            destinationDb = Path.Combine(path, "../Backup/BackupDb.bak");
-            if (!Directory.Exists(Path.Combine(path, "../Backup/")))
-            {
-                Directory.CreateDirectory(Path.Combine(path, "../Backup/"));
+                Directory.CreateDirectory(DestinationPath);
             }
+
+            BackupDetails = new BackupDetails
+            {
+                ConnectionString = sqlConnection?.ConnectionString,
+                Database = sqlConnection?.Database,
+                Server = sqlConnection?.DataSource,
+                DatabasePath = DatabasePath,
+                FilesPath = FilesPath,
+                RootPath = RootPath,
+                DestinationPath = DestinationPath
+            };
         }
 
         [HttpGet]
-        public async Task<SqlConnectionDetails> GetBackupDetails()
+        public async Task<BackupDetails> GetBackupDetails()
         {
             await Task.FromResult(0);
-            return SqlConnectionDetails;
+            return BackupDetails;
+        }
+
+        [HttpDelete]
+        public async Task<bool> DeleteBackup(string filename)
+        {
+            var path = Path.Combine(DestinationPath, filename);
+            File.Delete(path);
+            await Task.FromResult(0);
+            return true;
+        }
+
+        [HttpGet]
+        public async Task<BackupPerformedDetails> GetBackupsPerformed()
+        {
+            await Task.FromResult(0);
+            var backupsPerformed = new BackupPerformedDetails();
+            if (Directory.Exists(DestinationPath))
+            {
+                var files = Directory.GetFiles(DestinationPath, "*.files.zip");
+                var dbs = Directory.GetFiles(DestinationPath, "*.bak.zip");
+
+                foreach (var file in files)
+                {
+                    var d = new FileInfo(file);
+                    backupsPerformed.FileBackups.Add(d.Name, new FileDetails
+                    {
+                        Fullname = $"{MEDIA_VIRTUAL_PATH}{d.Name}",
+                        CreateDate = d.CreationTimeUtc
+                    });
+                }
+
+                foreach (var db in dbs)
+                {
+                    var d = new FileInfo(db);
+                    backupsPerformed.DatabaseBackups.Add(d.Name, new FileDetails
+                    {
+                        Fullname = $"{MEDIA_VIRTUAL_PATH}{d.Name}",
+                        CreateDate = d.CreationTimeUtc
+                    });
+                }
+            }
+            return backupsPerformed;
         }
 
         [HttpPost]
@@ -52,11 +108,11 @@ namespace development.camtc.org.App_Code
         {
             await Task.FromResult(0);
 
-            if (File.Exists(destinationZip))
+            if (File.Exists(string.Format(FilesPath, DateTime.Now.ToString(TIMESTAMP))))
             {
-                File.Delete(destinationZip);
+                File.Delete(string.Format(FilesPath, DateTime.Now.ToString(TIMESTAMP)));
             }
-            ZipFile.CreateFromDirectory(path, destinationZip);
+            ZipExtensions.CreateFromDirectory(RootPath, string.Format(FilesPath, DateTime.Now.ToString(TIMESTAMP)), CompressionLevel.Fastest, true, Encoding.UTF8, folderName => !folderName.Contains(@"TEMP"));
 
             return true;
         }
@@ -70,11 +126,20 @@ namespace development.camtc.org.App_Code
                 return true;
             }
 
-            SqlCommand command = new SqlCommand("backup database " + sqlConnection.Database + " to disk ='" + destinationDb + "' with init,stats=10", sqlConnection);
+            var path = string.Format(DatabasePath, sqlConnection.Database, DateTime.Now.ToString(TIMESTAMP));
+            SqlCommand command = new SqlCommand("BACKUP DATABASE [" + sqlConnection.Database + "] TO DISK ='" + path + "';", sqlConnection);
             sqlConnection.Open();
-            command.ExecuteNonQuery();
+            var result = await command.ExecuteNonQueryAsync();
             sqlConnection.Close();
-            await Task.FromResult(0);
+            if (result == -1)
+            {
+                var entryName = string.Format(database, sqlConnection.Database, DateTime.Now.ToString(TIMESTAMP));
+                using (ZipArchive zip = ZipFile.Open($"{path}.zip", ZipArchiveMode.Create))
+                {
+                    zip.CreateEntryFromFile(path, entryName);
+                    File.Delete(path);
+                }
+            }
             return true;
         }
 
@@ -118,13 +183,13 @@ namespace development.camtc.org.App_Code
         [HttpGet]
         public FileResult DownloadBackupFiles()
         {
-            return new FilePathResult(destinationZip, "application/zip, application/octet-stream, application/x-zip-compressed, multipart/x-zip");
+            return new FilePathResult(FilesPath, "application/zip, application/octet-stream, application/x-zip-compressed, multipart/x-zip");
         }
 
         [HttpGet]
         public FileResult DownloadBackupDb()
         {
-            return new FilePathResult(destinationDb, "application/octet-stream");
+            return new FilePathResult(DatabasePath, "application/octet-stream");
         }
 
         #region Helpers
