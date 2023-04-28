@@ -3,3 +3,4 @@ C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.AdPreview\bin\De
 C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.AdPreview\obj\Debug\Umbraco.Plugins.AdPreview.csproj.CoreCompileInputs.cache
 C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.AdPreview\obj\Debug\Umbraco.Plugins.AdPreview.dll
 C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.AdPreview\obj\Debug\Umbraco.Plugins.AdPreview.pdb
+C:\Users\jaoto\source\repos\Umbraco-Packages-v8\Umbraco.Plugins.AdPreview\obj\Debug\Umbraco.Plugins.AdPreview.csproj.AssemblyReference.cache
