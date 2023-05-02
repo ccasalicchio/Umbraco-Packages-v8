@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4cc940680680a864")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c0599c366a220fe3")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -52,7 +52,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("charLimit")]
-		public virtual object CharLimit => this.Value("charLimit");
+		public virtual string CharLimit => this.Value<string>("charLimit");
 
 		///<summary>
 		/// Copy Value
@@ -66,7 +66,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("defaultValue")]
-		public virtual object DefaultValue => this.Value("defaultValue");
+		public virtual string DefaultValue => this.Value<string>("defaultValue");
 
 		///<summary>
 		/// Hide Content
@@ -87,7 +87,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("preview")]
-		public virtual object Preview => this.Value("preview");
+		public virtual string Preview => this.Value<string>("preview");
 
 		///<summary>
 		/// propertyA
