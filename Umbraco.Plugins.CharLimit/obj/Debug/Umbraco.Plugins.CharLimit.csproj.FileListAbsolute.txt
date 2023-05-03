@@ -1,6 +1,0 @@
-C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.CharLimit\bin\Debug\Umbraco.Plugins.CharLimit.dll
-C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.CharLimit\bin\Debug\Umbraco.Plugins.CharLimit.pdb
-C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.CharLimit\obj\Debug\Umbraco.Plugins.CharLimit.csproj.AssemblyReference.cache
-C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.CharLimit\obj\Debug\Umbraco.Plugins.CharLimit.csproj.CoreCompileInputs.cache
-C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.CharLimit\obj\Debug\Umbraco.Plugins.CharLimit.dll
-C:\Users\jaoto\Source\Repos\Umbraco-Packages-v8\Umbraco.Plugins.CharLimit\obj\Debug\Umbraco.Plugins.CharLimit.pdb

@@ -45,8 +45,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Plugins\AdPreview\css\style.scss" />
-    <None Include="App_Plugins\AdPreview\package.manifest" />
+    <None Include="App_Plugins\AdPreview\css\style.scss">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Plugins\AdPreview\package.manifest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="LICENSE" />
     <None Include="README.md" />
     <None Include="Umbraco.Plugins.AdPreview.nuspec" />
@@ -54,14 +58,30 @@
     <None Include="Views\Partials\_Ad.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\AdPreview\css\style.css" />
-    <Content Include="App_Plugins\AdPreview\css\style.min.css" />
-    <Content Include="App_Plugins\AdPreview\js\controller.js" />
-    <Content Include="App_Plugins\AdPreview\js\edit.controller.js" />
-    <Content Include="App_Plugins\AdPreview\Lang\en-GB.xml" />
-    <Content Include="App_Plugins\AdPreview\Lang\en-US.xml" />
-    <Content Include="App_Plugins\AdPreview\views\edit.html" />
-    <Content Include="App_Plugins\AdPreview\views\view.html" />
+    <Content Include="App_Plugins\AdPreview\css\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\AdPreview\css\style.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\AdPreview\js\controller.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\AdPreview\js\edit.controller.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\AdPreview\Lang\en-GB.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\AdPreview\Lang\en-US.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\AdPreview\views\edit.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\AdPreview\views\view.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="css\image-ad.css" />
     <Content Include="icon.png" />
     <Content Include="readme.txt" />
