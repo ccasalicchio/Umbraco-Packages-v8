@@ -12,41 +12,39 @@
                                description="vm.content.description">
             </umb-editor-header>
 
-            <umb-editor-container>
+            <umb-editor-container class="editor-ad-preview-form">
                 <div class="form-group">
                     <h4><localize key="local_adimage"></localize></h4>
                     <div class="image-ad" ng-click="vm.openMediaPicker()">
-                        <img ng-src="{{vm.model.img}}" alt="" />
+                        <img ng-src="{{vm.model.img}}" alt="" ng-if="vm.model.img"/>
+                        <img src="/App_Plugins/AdPreview/views/no-image.jpg" alt="" ng-if="!vm.model.img"/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <h4><localize key="local_addetails"></localize></h4>
 
-                    <umb-control-group label="@labels_adtitle" required="false">
+                    <umb-control-group label="@labels_adtitle" required>
                         <input type="text" ng-model="vm.model.title" />
                     </umb-control-group>
-                    <umb-control-group label="@labels_addescription" required="false">
-                        <textarea ng-model="vm.model.description" rows="3"></textarea>
-                    </umb-control-group>
-                    <umb-control-group label="@labels_adurl" required="false">
+                    <umb-control-group label="@labels_adurl" required>
                         <input type="url" ng-model="vm.model.url" />
                     </umb-control-group>
-                    <umb-control-group label="@labels_adtooltip" required="false">
+                    <umb-control-group label="@labels_addescription">
+                        <textarea ng-model="vm.model.description" rows="3"></textarea>
+                    </umb-control-group>
+                    <umb-control-group label="@labels_adtooltip">
                         <input type="text" ng-model="vm.model.tooltip" />
                     </umb-control-group>
-                    <umb-control-group label="@labels_adreferrer" required="false">
+                    <umb-control-group label="@labels_adreferrer">
                         <input type="text" ng-model="vm.model.referrer" />
                     </umb-control-group>
-                    <umb-control-group label="@labels_adcss" required="false">
+                    <umb-control-group label="@labels_adcss">
                         <input type="text" ng-model="vm.model.css" />
                     </umb-control-group>
 
-                    <umb-control-group required="false">
-                        <label class="flex-control">
-                            <input type="checkbox" ng-model="vm.model.overlay" />
-                            <localize key="labels_adoverlay"></localize>
-                        </label>
+                    <umb-control-group label="@labels_adoverlay">
+                        <input type="checkbox" ng-model="vm.model.overlay" />
                     </umb-control-group>
 
                 </div>
@@ -75,10 +73,4 @@
 
         </umb-editor-view>
     </form>
-
-    <umb-overlay ng-if="vm.mediaPicker.show"
-                 model="vm.mediaPicker"
-                 view="vm.mediaPicker.view"
-                 position="right">
-    </umb-overlay>
 </div>

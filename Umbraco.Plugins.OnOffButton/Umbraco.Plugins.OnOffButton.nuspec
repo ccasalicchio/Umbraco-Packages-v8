@@ -16,15 +16,6 @@
     <readme>\App_Plugins\OnOffButton\README.md</readme>
     <dependencies>
       <group targetFramework=".NETFramework4.7.2">
-        <dependency id="Microsoft.Bcl.AsyncInterfaces" version="7.0.0" />
-        <dependency id="System.Buffers" version="4.5.1" />
-        <dependency id="System.Memory" version="4.5.5" />
-        <dependency id="System.Numerics.Vectors" version="4.5.0" />
-        <dependency id="System.Runtime.CompilerServices.Unsafe" version="6.0.0" />
-        <dependency id="System.Text.Encodings.Web" version="7.0.0" />
-        <dependency id="System.Text.Json" version="7.0.2" />
-        <dependency id="System.Threading.Tasks.Extensions" version="4.5.4" />
-        <dependency id="System.ValueTuple" version="4.5.0" />
       </group>
     </dependencies>
   </metadata>

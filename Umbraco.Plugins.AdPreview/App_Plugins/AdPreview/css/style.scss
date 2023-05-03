@@ -1,6 +1,14 @@
 ﻿.editor-adpreview {
     transition: all 0.4s ease-in-out;
 
+    .editor-ad-preview-form {
+        margin: 5px;
+        padding: 10px;
+        background: #fff;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
     .ad-wrapper {
         position: relative;
         padding: 5px;
@@ -73,7 +81,7 @@
         .controls {
             width: 100%;
 
-            input, textarea {
+            input:not([type=checkbox]), textarea {
                 width: 100%;
             }
         }

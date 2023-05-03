@@ -1,12 +1,9 @@
-﻿angular.module("umbraco").controller("AdPreview.Edit.Controller", function ($scope, localizationService) {
+﻿angular.module("umbraco").controller("AdPreview.Edit.Controller", function ($scope, editorService, localizationService) {
     'use strict';
     const vm = this;
-    const mediaPicker = {
-        show: false,
-    }
+
     vm.buttonState = 'init';
     vm.loading = true;
-    vm.mediaPicker = mediaPicker;
     vm.model = null;
     vm.content = {
         name: 'Configure Ad',
@@ -19,36 +16,29 @@
     }
 
     vm.close = function () {
-        $scope.cancel();
+        $scope.model.close();
     }
     vm.save = function () {
-        $scope.submit(vm.model);
+        $scope.model.submit(vm.model);
     }
     vm.openMediaPicker = function () {
-        vm.mediaPicker = {
-            title: 'Select Ad Image',
-            view: "mediapicker",
-            section: "media",
-            treeAlias: "media",
-            entityType: "media",
+        let mediaPickerOptions = {
+            size: 'small',
             multiPicker: false,
-            hideHeader: false,
-            show: true,
             submit: function (model) {
-                vm.model.img = model.selectedImages[0].image;
-                vm.mediaPicker.show = false;
-                vm.mediaPicker = Object.assign(mediaPicker);
+                vm.model.img = model.selection[0].image;
+                editorService.close();
             },
             close: function (oldModel) {
-                vm.mediaPicker.show = false;
-                vm.mediaPicker = Object.assign(mediaPicker);
+                editorService.close();
             }
         };
+        editorService.mediaPicker(mediaPickerOptions);
     };
 
     function onInit() {
         vm.loading = false;
-        vm.model = $scope.dialogData.model;
+        vm.model = $scope.model.ad;
         localizationService.localize('local_instructions').then(data => {
             vm.content.description = data;
         });
