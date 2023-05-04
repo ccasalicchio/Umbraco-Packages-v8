@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>SplatDev.Umbraco.Plugins.AdPreview</id>
+    <id>SplatDev.Umbraco.Plugins.Backups</id>
     <version>8.18.7.1</version>
-    <title>Ad Preview</title>
+    <title>Backups</title>
     <authors>SplatDev Ltda</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>https://our.umbraco.com/packages/backoffice-extensions/ad-preview/</projectUrl>
-    <description>Ad Preview plugin for Umbraco 8.18.7. A simple image ad preview and display for the front office. For running custom ads (not from google ads or alternatives). Allows inserting custom text that is overlayed the image, with tooltip and click options.</description>
-    <releaseNotes>Upgrade to work with v8.18.7</releaseNotes>
+    <projectUrl>https://our.umbraco.com/packages/backoffice-extensions/backups/</projectUrl>
+    <description>Backup plugin for Umbraco 8.18.7. Allows backing up files and database directly from the backoffice, when you don't have access to the server.</description>
+    <releaseNotes>Created base package for v8.18.7</releaseNotes>
     <copyright>Copyright ©2023 SplatDev</copyright>
-    <tags>umbraco ad preview</tags>
-    <icon>\App_Plugins\AdPreview\icon.png</icon>
-    <readme>\App_Plugins\AdPreview\README.md</readme>
-    <dependencies>
-      <group targetFramework=".NETFramework4.7.2">
+    <tags>umbraco backups</tags>
+    <icon>\App_Plugins\Dashboards\SiteBackup\icon.png</icon>
+    <readme>\App_Plugins\Dashboards\SiteBackup\README.md</readme>
+    <references>
+      <group targetFramework="net472">
+        <reference file="System.IO.Compression.dll" />
+        <reference file="System.IO.Compression.FileSystem.dll" />
+        <reference file="Umbraco.Plugins.Backups.dll" />
       </group>
-    </dependencies>
+    </references>
   </metadata>
   <files>
-    <file src=".\icon.png" target="\App_Plugins\AdPreview\" />
-    <file src=".\README.md" target="\App_Plugins\AdPreview\" />
-    <file src=".\readme.txt" target="\App_Plugins\AdPreview\" />
-    <file src=".\App_Plugins\AdPreview\package.manifest" target="\App_Plugins\AdPreview\" />
+    <file src=".\icon.png" target="\App_Plugins\Dashboards\SiteBackup\" />
+    <file src=".\README.md" target="\App_Plugins\Dashboards\SiteBackup\" />
+    <file src=".\readme.txt" target="\App_Plugins\Dashboards\SiteBackup\" />
+    <file src=".\App_Plugins\Dashboards\SiteBackup\package.manifest" target="\App_Plugins\Dashboards\SiteBackup\" />
+    <file src=".\lib\net472\*.dll" target="lib\net472\" />
+    <file src=".\ref\net472\*.dll" target="ref\net472\" />
+    <file src=".\bin\Debug\Umbraco.Plugins.Backups.dll" target="ref\net472" />
   </files>
 </package>

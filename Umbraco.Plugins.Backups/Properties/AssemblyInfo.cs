@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Umbraco.Plugins.Backups")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Backup plugin for Umbraco 8.18.7. Allows backing up files and database directly from the backoffice, when you don't have access to the server.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Umbraco.Plugins.Backups")]
+[assembly: AssemblyProduct("SplatDev.Umbraco.Plugins.Backups")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("SplatDev Ltda")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("8.18.7.2")]
+[assembly: AssemblyFileVersion("8.18.7.2")]

@@ -17,7 +17,7 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c0599c366a220fe3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5554d439a928b1e3")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
@@ -59,7 +59,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("copyValue")]
-		public virtual object CopyValue => this.Value("copyValue");
+		public virtual string CopyValue => this.Value<string>("copyValue");
 
 		///<summary>
 		/// Default Value
@@ -73,14 +73,14 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("hideContent")]
-		public virtual object HideContent => this.Value("hideContent");
+		public virtual string HideContent => this.Value<string>("hideContent");
 
 		///<summary>
 		/// On-Off Button
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("onOffButton")]
-		public virtual object OnOffButton => this.Value("onOffButton");
+		public virtual string OnOffButton => this.Value<string>("onOffButton");
 
 		///<summary>
 		/// Preview
@@ -108,7 +108,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("restrictPage")]
-		public virtual object RestrictPage => this.Value("restrictPage");
+		public virtual string RestrictPage => this.Value<string>("restrictPage");
 	}
 
 	/// <summary>Folder</summary>
