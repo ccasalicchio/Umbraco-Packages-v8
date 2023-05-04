@@ -2,12 +2,12 @@
 <package >
   <metadata>
     <id>SplatDev.Umbraco.Plugins.Backups</id>
-    <version>8.18.7.1</version>
+    <version>8.18.7.2</version>
     <title>Backups</title>
     <authors>SplatDev Ltda</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>https://our.umbraco.com/packages/backoffice-extensions/backups/</projectUrl>
+    <projectUrl>https://our.umbraco.com/packages/backoffice-extensions/simple-backups/</projectUrl>
     <description>Backup plugin for Umbraco 8.18.7. Allows backing up files and database directly from the backoffice, when you don't have access to the server.</description>
     <releaseNotes>Created base package for v8.18.7</releaseNotes>
     <copyright>Copyright ©2023 SplatDev</copyright>
