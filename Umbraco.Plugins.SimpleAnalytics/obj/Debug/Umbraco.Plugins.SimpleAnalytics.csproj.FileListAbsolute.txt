@@ -1,0 +1,2 @@
+C:\Users\jaoto\source\repos\Umbraco-Packages-v8\Umbraco.Plugins.SimpleAnalytics\obj\Debug\Umbraco.Plugins.SimpleAnalytics.csproj.AssemblyReference.cache
+C:\Users\jaoto\source\repos\Umbraco-Packages-v8\Umbraco.Plugins.SimpleAnalytics\obj\Debug\Umbraco.Plugins.SimpleAnalytics.csproj.CoreCompileInputs.cache
