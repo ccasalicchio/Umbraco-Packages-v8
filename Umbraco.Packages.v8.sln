@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.Backups", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.YouTubePreview", "Umbraco.Plugins.YouTubePreview\Umbraco.Plugins.YouTubePreview.csproj", "{9965C2FE-58CF-41A0-960E-6E3B43228469}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.SimpleAnalytics", "Umbraco.Plugins.SimpleAnalytics\Umbraco.Plugins.SimpleAnalytics.csproj", "{08C93CFE-3963-4E7F-9485-F1B9EAFEDD15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco.Plugins.SocialMediaChannels", "Umbraco.Plugins.SocialMediaChannels\Umbraco.Plugins.SocialMediaChannels.csproj", "{C7A89697-8611-4851-843C-2E04AF352AA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +83,14 @@ Global
 		{9965C2FE-58CF-41A0-960E-6E3B43228469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9965C2FE-58CF-41A0-960E-6E3B43228469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9965C2FE-58CF-41A0-960E-6E3B43228469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C93CFE-3963-4E7F-9485-F1B9EAFEDD15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C93CFE-3963-4E7F-9485-F1B9EAFEDD15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C93CFE-3963-4E7F-9485-F1B9EAFEDD15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C93CFE-3963-4E7F-9485-F1B9EAFEDD15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7A89697-8611-4851-843C-2E04AF352AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7A89697-8611-4851-843C-2E04AF352AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7A89697-8611-4851-843C-2E04AF352AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7A89697-8611-4851-843C-2E04AF352AA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
