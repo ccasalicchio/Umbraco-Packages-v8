@@ -6,7 +6,7 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5554d439a928b1e3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "63a10fe1250971c3")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -60,6 +60,13 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Channels
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("channels")]
+		public virtual global::Newtonsoft.Json.Linq.JToken Channels => this.Value<global::Newtonsoft.Json.Linq.JToken>("channels");
 
 		///<summary>
 		/// Char Limit
@@ -123,6 +130,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
 		[ImplementPropertyType("restrictPage")]
 		public virtual string RestrictPage => this.Value<string>("restrictPage");
+
+		///<summary>
+		/// Visits
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.7")]
+		[ImplementPropertyType("visits")]
+		public virtual object Visits => this.Value("visits");
 	}
 
 	/// <summary>Folder</summary>

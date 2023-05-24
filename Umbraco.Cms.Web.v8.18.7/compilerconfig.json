@@ -2,5 +2,9 @@
   {
     "outputFile": "App_Plugins/Dashboards/SiteBackup/css/style.css",
     "inputFile": "App_Plugins/Dashboards/SiteBackup/css/style.scss"
+  },
+  {
+    "outputFile": "App_Plugins/SimpleAnalytics/Dashboard/css/style.css",
+    "inputFile": "App_Plugins/SimpleAnalytics/Dashboard/css/style.scss"
   }
 ]

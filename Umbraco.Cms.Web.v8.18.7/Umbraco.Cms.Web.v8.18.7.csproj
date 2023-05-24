@@ -210,8 +210,8 @@
     <Reference Include="MiniProfiler.Shared, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
       <HintPath>..\packages\MiniProfiler.Shared.4.0.138\lib\net461\MiniProfiler.Shared.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NPoco, Version=3.9.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NPoco.3.9.4\lib\net45\NPoco.dll</HintPath>
@@ -449,9 +449,10 @@
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
     <Content Include="Umbraco.md" />
     <Content Include="compilerconfig.json" />
-    <Content Include="compilerconfig.json.defaults" />
+    <None Include="compilerconfig.json.defaults" />
     <Content Include="App_Data\packages\createdPackages.config" />
     <None Include="packages.config" />
+    <Content Include="Views\Example.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -459,7 +460,19 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Plugins.SimpleAnalytics\Umbraco.Plugins.SimpleAnalytics.csproj">
+      <Project>{08c93cfe-3963-4e7f-9485-f1b9eafedd15}</Project>
+      <Name>Umbraco.Plugins.SimpleAnalytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Umbraco.Plugins.SocialMediaChannels\Umbraco.Plugins.SocialMediaChannels.csproj">
+      <Project>{c7a89697-8611-4851-843c-2e04af352aa8}</Project>
+      <Name>Umbraco.Plugins.SocialMediaChannels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Plugins\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
