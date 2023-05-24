@@ -317,22 +317,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <Content Include="scripts\analytics.js" />
+    <Content Include="scripts\analytics.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Plugins\SimpleAnalytics\Dashboard\assets\browsers\Web.config" />
     <Content Include="App_Plugins\SimpleAnalytics\Dashboard\assets\flags\Web.config" />
     <Content Include="App_Plugins\SimpleAnalytics\Dashboard\assets\os\Web.config" />
     <Content Include="App_Plugins\SimpleAnalytics\Dashboard\css\style.scss" />
-    <Content Include="App_Plugins\SimpleAnalytics\Dashboard\IP2LOCATION-LITE-DB11.BIN" />
+    <Content Include="App_Plugins\SimpleAnalytics\Dashboard\IP2LOCATION-LITE-DB11.BIN">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Plugins\SimpleAnalytics\Dashboard\js\angular-chart.min.js.map" />
-    <Content Include="App_Plugins\SimpleAnalytics\Dashboard\package.manifest" />
-    <Content Include="App_Plugins\SimpleAnalytics\Dashboard\Web.config" />
-    <Content Include="App_Plugins\SimpleAnalytics\PageCounter\package.manifest" />
+    <Content Include="App_Plugins\SimpleAnalytics\Dashboard\package.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\SimpleAnalytics\Dashboard\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\SimpleAnalytics\PageCounter\package.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="LICENSE" />
     <None Include="packages.config" />
     <None Include="README.md" />
     <None Include="Umbraco.Plugins.SimpleAnalytics.nuspec" />
-    <Content Include="Views\Example-Analytics.cshtml" />
-    <Content Include="Views\Partials\_analytics.cshtml" />
+    <Content Include="Views\Example-Analytics.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Partials\_analytics.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
