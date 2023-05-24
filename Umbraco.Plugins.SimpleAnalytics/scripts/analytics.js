@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const logVisitUrl = "/Umbraco/Analytics/AnalyticsApi/LogVisit";
         let id = document.querySelector("[data-node]").getAttribute("data-node");
         let thisVisit = {
-            NodeId: id,
+            ContentNodeId: id,
             IPAddress: ip,
             ExitUrl: exitUrl ?? ''
         }
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let thisVisit = {
             Id: 0,
-            NodeId: id,
+            ContentNodeId: id,
             IPAddress: ip,
             Browser: null,
             Resolution: `${window.screen.availWidth}x${window.screen.availHeight}`,
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             };
         }, 1 * 1000);
-        await getVisitCount(thisVisit.NodeId);
+        await getVisitCount(thisVisit.ContentNodeId);
     }
 
 

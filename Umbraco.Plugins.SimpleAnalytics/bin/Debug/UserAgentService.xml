@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UserAgentService</name>
+    </assembly>
+    <members>
+        <member name="T:Ng.Services.IUserAgentService">
+            <summary>Default interface for UserAgentService</summary>
+        </member>
+        <member name="P:Ng.Services.IUserAgentService.Settings">
+            <summary>Gets or sets the settings.</summary>
+        </member>
+        <member name="M:Ng.Services.IUserAgentService.Parse(System.String)">
+            <summary>Parses the specified user agent string.</summary>
+            <param name="userAgentString">The user agent string.</param>
+            <returns>An UserAgent object</returns>
+        </member>
+        <member name="T:Ng.Services.ServiceCollectionExtensions">
+            <summary>
+            Contains static methods to help with Dependancy Injection
+            </summary>
+        </member>
+        <member name="M:Ng.Services.ServiceCollectionExtensions.AddUserAgentService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the user agent service to the DI container
+            </summary>
+            <param name="serviceCollection">DI container</param>
+            <returns>DI container</returns>
+        </member>
+        <member name="M:Ng.Services.ServiceCollectionExtensions.AddUserAgentService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Ng.Services.UserAgentSettings})">
+            <summary>
+            Adds the user agent service with options to the DI container
+            </summary>
+            <param name="serviceCollection">DI container</param>
+            <param name="options">Options for UserAgentService</param>
+            <returns>DI container</returns>
+        </member>
+        <member name="T:Ng.Services.UserAgent">
+            <summary>
+            Parsed UserAgent object
+            </summary>
+        </member>
+        <member name="P:Ng.Services.UserAgent.IsBrowser">
+            <summary>
+            Gets or sets a value indicating whether this UserAgent is a browser.
+            </summary>
+            <value>
+              <c>true</c> if this UserAgent is a browser; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Ng.Services.UserAgent.IsRobot">
+            <summary>
+            Gets or sets a value indicating whether this UserAgent is a robot.
+            </summary>
+            <value>
+              <c>true</c> if this UserAgent is a robot; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Ng.Services.UserAgent.IsMobile">
+            <summary>
+            Gets or sets a value indicating whether this UserAgent is a mobile device.
+            </summary>
+            <value>
+              <c>true</c> if this UserAgent is a mobile device; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Ng.Services.UserAgent.Platform">
+            <summary>
+            Gets or sets the platform.
+            </summary>
+            <value>
+            The platform or operating system.
+            </value>
+        </member>
+        <member name="P:Ng.Services.UserAgent.Browser">
+            <summary>
+            Gets or sets the browser.
+            </summary>
+            <value>
+            The browser.
+            </value>
+        </member>
+        <member name="P:Ng.Services.UserAgent.BrowserVersion">
+            <summary>
+            Gets or sets the browser version.
+            </summary>
+            <value>
+            The browser version.
+            </value>
+        </member>
+        <member name="P:Ng.Services.UserAgent.Mobile">
+            <summary>
+            Gets or sets the mobile device.
+            </summary>
+            <value>
+            The mobile device.
+            </value>
+        </member>
+        <member name="P:Ng.Services.UserAgent.Robot">
+            <summary>
+            Gets or sets the robot.
+            </summary>
+            <value>
+            The robot.
+            </value>
+        </member>
+        <member name="T:Ng.Services.UserAgentService">
+            <summary>
+            The UserAgent service
+            </summary>
+            <seealso cref="T:Ng.Services.IUserAgentService" />
+        </member>
+        <member name="P:Ng.Services.UserAgentService.Settings">
+            <summary>
+            Gets or sets the settings.
+            </summary>
+        </member>
+        <member name="M:Ng.Services.UserAgentService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ng.Services.UserAgentService"/> class.
+            </summary>
+        </member>
+        <member name="M:Ng.Services.UserAgentService.#ctor(Ng.Services.UserAgentSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ng.Services.UserAgentService"/> class.
+            </summary>
+            <param name="settings">UserAgent settings.</param>
+        </member>
+        <member name="M:Ng.Services.UserAgentService.#ctor(Microsoft.Extensions.Options.IOptions{Ng.Services.UserAgentSettings})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ng.Services.UserAgentService"/> class.
+            </summary>
+            <param name="settings">UserAgent settings.</param>
+        </member>
+        <member name="M:Ng.Services.UserAgentService.Parse(System.String)">
+            <summary>
+            Parses the specified user agent string.
+            </summary>
+            <param name="userAgentString">The user agent string.</param>
+            <returns>
+            An UserAgent object
+            </returns>
+        </member>
+        <member name="T:Ng.Services.UserAgentSettings">
+            <summary>
+            UserAgent settings container.
+            </summary>
+        </member>
+        <member name="P:Ng.Services.UserAgentSettings.CacheSizeLimit">
+            <summary>
+            Gets or sets the maximum size of the cache. 10000 means it will store 10000 different useragent strings in cache. It doesn't mean bytes.
+            </summary>
+        </member>
+        <member name="P:Ng.Services.UserAgentSettings.AbsoluteExpirationRelativeToNow">
+            <summary>
+            Gets or sets an absolute expiration time for a cache entry, relative to now.
+            </summary>
+        </member>
+        <member name="P:Ng.Services.UserAgentSettings.CacheSlidingExpiration">
+            <summary>
+            Gets or sets how long a cache entry can be inactive (e.g. not accessed) before it will be removed. This will not extend the entry lifetime beyond the absolute expiration (if set).
+            </summary>
+        </member>
+        <member name="P:Ng.Services.UserAgentSettings.UaStringSizeLimit">
+            <summary>
+            Gets or sets the maximum size of the useragent string. Limiting the length of the useragent string protects from hackers sending in extremely long user agent strings.
+            </summary>
+        </member>
+        <member name="P:Ng.Services.UserAgentSettings.Platforms">
+            <summary>
+            Gets a dictionary containing mappings for platforms.
+            </summary>
+        </member>
+        <member name="P:Ng.Services.UserAgentSettings.Browsers">
+            <summary>
+            Gets a dictionary containing mappings for browsers.
+            </summary>
+        </member>
+        <member name="P:Ng.Services.UserAgentSettings.Mobiles">
+            <summary>
+            Gets a dictionary containing mappings for mobiles.
+            </summary>
+        </member>
+        <member name="P:Ng.Services.UserAgentSettings.Robots">
+            <summary>
+            Gets a dictionary containing mappings for robots.
+            </summary>
+        </member>
+    </members>
+</doc>
