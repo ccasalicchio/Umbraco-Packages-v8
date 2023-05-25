@@ -6,7 +6,7 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "803a6ed8f522b967")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "b51a1e20a779209f")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -69,13 +69,6 @@ namespace Umbraco.Web.PublishedModels
 		public virtual string Channels => this.Value<string>("channels");
 
 		///<summary>
-		/// Char Limit
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
-		[ImplementPropertyType("charLimit")]
-		public virtual string CharLimit => this.Value<string>("charLimit");
-
-		///<summary>
 		/// Copy Value
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
@@ -132,11 +125,25 @@ namespace Umbraco.Web.PublishedModels
 		public virtual string RestrictPage => this.Value<string>("restrictPage");
 
 		///<summary>
+		/// Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("text")]
+		public virtual object Text => this.Value("text");
+
+		///<summary>
+		/// Text Area
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("textArea")]
+		public virtual object TextArea => this.Value("textArea");
+
+		///<summary>
 		/// Visits
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
 		[ImplementPropertyType("visits")]
-		public virtual object Visits => this.Value("visits");
+		public virtual string Visits => this.Value<string>("visits");
 	}
 
 	/// <summary>Folder</summary>

@@ -1,11 +1,10 @@
 <div ng-controller="splatDev.CharLimitRestrict.Controller as vm" class="input-limit">
     <span ng-if="vm.limit >= 100">
-        <textarea ng-model="vm.characters" ng-change="vm.limitChars()" rows="10" class="umb-editor umb-textarea textstring" maxlength="{{+vm.limit}}"></textarea>
+        <textarea ng-model="vm.characters" ng-change="vm.limitChars()" rows="10" class="textstring" maxlength="{{+vm.limit}}"></textarea>
     </span>
     <span ng-if="vm.limit < 100">
-        <input ng-model="vm.characters" ng-change="vm.limitChars()" type="text" class="umb-editor umb-textstring textstring" maxlength="{{+vm.limit}}" />
+        <input ng-model="vm.characters" ng-change="vm.limitChars()" type="text" class="textstring" maxlength="{{+vm.limit}}" />
     </span>
-    <br />
     <span class="counter {{vm.icon}}">
         <i class="custom-icon icon-{{vm.icon}}"></i>
         <span ng-show="vm.countLeft">

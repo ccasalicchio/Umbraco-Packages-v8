@@ -6,5 +6,9 @@
   {
     "outputFile": "App_Plugins/SimpleAnalytics/Dashboard/css/style.css",
     "inputFile": "App_Plugins/SimpleAnalytics/Dashboard/css/style.scss"
+  },
+  {
+    "outputFile": "App_Plugins/CharLimitRestrict/css/style.css",
+    "inputFile": "App_Plugins/CharLimitRestrict/css/style.scss"
   }
 ]

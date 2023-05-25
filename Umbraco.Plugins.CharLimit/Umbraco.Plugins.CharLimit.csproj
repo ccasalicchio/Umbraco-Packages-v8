@@ -44,13 +44,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Plugins\CharLimitRestrict\css\style.scss" />
-    <None Include="App_Plugins\CharLimitRestrict\package.manifest" />
+    <Content Include="App_Plugins\CharLimitRestrict\css\style.scss" />
     <None Include="LICENSE" />
     <None Include="README.md" />
     <None Include="Umbraco.Plugins.CharLimit.nuspec" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\CharLimitRestrict\package.manifest" />
     <Content Include="App_Plugins\CharLimitRestrict\css\style.css" />
     <Content Include="App_Plugins\CharLimitRestrict\css\style.min.css" />
     <Content Include="App_Plugins\CharLimitRestrict\js\controller.js" />
