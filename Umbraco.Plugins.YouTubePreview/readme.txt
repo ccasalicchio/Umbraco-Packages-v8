@@ -4,7 +4,7 @@ A simple YouTube property editor that has a preview box for the video.
 
 You may insert the Id of any YouTube video and below the video box will display the preview.
 
-Umbraco v7.15.10
+Umbraco v8.18.8
 •Creates a Data Type 'YoutubePreview'
 
 Visit the Project Page in the Umbraco Community

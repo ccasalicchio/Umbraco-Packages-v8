@@ -1,7 +1,7 @@
 {
   "propertyEditors": [
     {
-      "alias": "YouTubePreview",
+      "alias": "splatDev.YouTubePreview",
       "name": "YouTube Preview",
       "icon": "icon-movie",
       "group": "Rich Content",

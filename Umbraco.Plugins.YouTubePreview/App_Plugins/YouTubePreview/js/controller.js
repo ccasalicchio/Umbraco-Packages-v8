@@ -12,11 +12,6 @@ angular.module("umbraco").controller("splatDev.YouTubePreview.Controller", funct
 		return 'https://www.youtube.com/embed/' + videoId;
 	};
 
-	/*vm.update = function () {
-	    
-		$scope.model.value = vm.videoId
-	};*/
-
 	function init() {
 		if ($scope.model.value !== "") {
 

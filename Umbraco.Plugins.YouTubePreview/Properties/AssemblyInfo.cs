@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Umbraco.Plugins.YouTubePreview")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A simple YouTube property editor that has a preview box for the video. You may insert the Id of any YouTube video and below the video box will display the preview.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("SplatDev Ltda")]
 [assembly: AssemblyProduct("Umbraco.Plugins.YouTubePreview")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("18.8.18.1")]
+[assembly: AssemblyFileVersion("18.8.18.1")]

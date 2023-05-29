@@ -44,12 +44,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Plugins\YouTubePreview\package.manifest" />
     <None Include="LICENSE" />
     <None Include="README.md" />
     <None Include="Umbraco.Plugins.YouTubePreview.nuspec" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\YouTubePreview\package.manifest" />
     <Content Include="App_Plugins\YouTubePreview\css\style.css" />
     <Content Include="App_Plugins\YouTubePreview\js\controller.js" />
     <Content Include="App_Plugins\YouTubePreview\lang\en-US.xml" />
