@@ -45,18 +45,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Plugins\RestrictPage\css\style.scss" />
-    <None Include="App_Plugins\RestrictPage\package.manifest" />
     <None Include="LICENSE" />
     <None Include="README.md" />
     <None Include="Umbraco.Plugins.RestrictPage.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\RestrictPage\css\style.css" />
+    <Content Include="App_Plugins\RestrictPage\package.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\RestrictPage\css\style.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Plugins\RestrictPage\css\style.min.css" />
-    <Content Include="App_Plugins\RestrictPage\js\controller.js" />
-    <Content Include="App_Plugins\RestrictPage\lang\en-US.xml" />
-    <Content Include="App_Plugins\RestrictPage\lang\pt-BR.xml" />
-    <Content Include="App_Plugins\RestrictPage\views\view.html" />
+    <Content Include="App_Plugins\RestrictPage\js\controller.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\RestrictPage\lang\en-US.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\RestrictPage\lang\pt-BR.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\RestrictPage\views\view.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="icon.png" />
     <Content Include="readme.txt" />
   </ItemGroup>

@@ -2,7 +2,7 @@
 
 A simple visual representation of a restricted page (for members navigation for example)
 
-##### Umbraco v7.15.10
+##### Umbraco v8.18.8
 
 - Creates a Data Type 'Restrict Page'
 
