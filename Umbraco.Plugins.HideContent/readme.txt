@@ -2,7 +2,7 @@
 
 Implements a visual representation (hidden/visible) for the umbracoNaviHide property
 
-Umbraco v7.15.10
+Umbraco v8.18.8
 
 - Creates a Data Type 'Hide Content'
 

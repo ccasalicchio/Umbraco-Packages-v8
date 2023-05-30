@@ -6,7 +6,7 @@
       "icon": "icon-document-dashed-line",
       "group": "Common",
       "editor": {
-        "hideLabel": false,
+        "hideLabel": true,
         "view": "~/App_Plugins/HideContent/views/view.html",
         "valueType": "INT"
       }

@@ -1,26 +1,22 @@
 ﻿.hide-content-wrapper {
   position: relative; }
-    .hide-content-wrapper .hidden-label {
-        transition: all 0.2s ease-in-out;
-        padding: 12px 24px;
-        font-size: 1.3rem;
-        color: #fff;
-        width: 100%;
-        border: 2px solid transparent;
-        border-radius: 4px;
-        box-sizing: border-box;
-       
-    }
-        .hide-content-wrapper .hidden-label.true {
-            background: #ff9800;
-            color: #f2f2f2;
-        }
+  .hide-content-wrapper .hidden-label {
+    transition: all 0.2s ease-in-out;
+    padding: 12px 24px;
+    font-size: 1.3rem;
+    color: #fff;
+    width: 100%;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box; }
+    .hide-content-wrapper .hidden-label.true {
+      background: #92163a;
+      color: #f2f2f2; }
       .hide-content-wrapper .hidden-label.true i {
         color: #f3f3f3; }
-        .hide-content-wrapper .hidden-label.false {
-            background: #1b264f;
-            color: #fff;
-        }
+    .hide-content-wrapper .hidden-label.false {
+      background: #39d38b;
+      color: #fff; }
       .hide-content-wrapper .hidden-label.false i {
         color: #fff; }
   .hide-content-wrapper .hiddenswitch {

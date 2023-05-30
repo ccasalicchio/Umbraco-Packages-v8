@@ -45,19 +45,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Plugins\HideContent\css\styles.scss" />
-    <None Include="App_Plugins\HideContent\package.manifest" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="LICENSE" />
     <None Include="README.md" />
     <None Include="Umbraco.Plugins.HideContent.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\HideContent\css\style.css" />
-    <Content Include="App_Plugins\HideContent\css\styles.css" />
+    <Content Include="App_Plugins\HideContent\package.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\HideContent\css\styles.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Plugins\HideContent\css\styles.min.css" />
-    <Content Include="App_Plugins\HideContent\js\controller.js" />
-    <Content Include="App_Plugins\HideContent\lang\en-US.xml" />
-    <Content Include="App_Plugins\HideContent\lang\pt-BR.xml" />
-    <Content Include="App_Plugins\HideContent\views\view.html" />
+    <Content Include="App_Plugins\HideContent\js\controller.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\HideContent\lang\en-US.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\HideContent\lang\pt-BR.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Plugins\HideContent\views\view.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="icon.png" />
     <Content Include="readme.txt" />
   </ItemGroup>
