@@ -1,14 +1,12 @@
 # Umbraco Packages
 
-for v8.18.7
+for v8.18.7+
 
 ##### Created by [SplatDev Ltda](https://splatdev.com) - April 2023
 
 Each package has been created to meet specific needs for client projects. **These packages are free and open source.**
 
 The available packages are:
-
-- [Custom Login](https://our.umbraco.com/packages/backoffice-extensions/custom-login-page/)
 
 
 - [Social Media Channels](https://our.umbraco.com/packages/website-utilities/social-media-channels/)
@@ -18,10 +16,6 @@ The available packages are:
 - [Simple Analytics](https://our.umbraco.com/packages/backoffice-extensions/visit-counter/)
 
 		Install-Package SplatDev.Umbraco.Plugins.SimpleAnalytics
-
-- [On-Off Button](https://our.umbraco.com/packages/backoffice-extensions/on-off-button/)
-
-		Install-Package SplatDev.Umbraco.Plugins.OnOffButton
 
 - [YouTube Preview](https://our.umbraco.com/packages/backoffice-extensions/youtube-video-property-editor/)
 
