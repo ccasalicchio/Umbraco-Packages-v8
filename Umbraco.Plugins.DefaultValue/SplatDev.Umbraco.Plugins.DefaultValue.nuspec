@@ -8,8 +8,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://our.umbraco.com/packages/backoffice-extensions/default-value/</projectUrl>
-    <description>Default value Data Type for Umbraco v8.18.7</description>
-    <releaseNotes>Added working functionality for default value for backOffice</releaseNotes>
+    <description>Default value Data Type for Umbraco v8.18.7+</description>
+    <releaseNotes>migrated to v8</releaseNotes>
     <copyright>Copyright ©2023 SplatDev</copyright>
     <tags>umbraco default value</tags>
     <icon>\App_Plugins\DefaultValue\icon.png</icon>

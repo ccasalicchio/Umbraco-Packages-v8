@@ -1,6 +1,6 @@
 ﻿# Default Value Property Editor
 
-for Umbraco v8.18.7
+for Umbraco v8.18.7+
 
 - Creates a Data Type with a Default Value (used for properties that cannot be modified)
 

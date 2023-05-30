@@ -44,15 +44,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\DefaultValue\css\style.css" />
-    <Content Include="App_Plugins\DefaultValue\js\controller.js" />
+    <Content Include="App_Plugins\DefaultValue\css\style.css">
+      <DependentUpon>style.scss</DependentUpon>
+    </Content>
+    <Content Include="App_Plugins\DefaultValue\css\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="App_Plugins\DefaultValue\js\controller.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Plugins\DefaultValue\views\view.html" />
     <Content Include="icon.png" />
     <Content Include="readme.txt" />
     <Content Include="Umbraco.Plugins.DefaultValue.csproj.user" />
+    <Content Include="App_Plugins\DefaultValue\package.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Plugins\DefaultValue\package.manifest" />
+    <None Include="App_Plugins\DefaultValue\css\style.scss" />
     <None Include="README.md" />
     <None Include="SplatDev.Umbraco.Plugins.DefaultValue.nuspec" />
   </ItemGroup>

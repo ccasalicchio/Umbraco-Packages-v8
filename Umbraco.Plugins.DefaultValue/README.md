@@ -1,6 +1,6 @@
 # Default Value Property Editor
 
-##### Umbraco v8.18.7
+##### Umbraco v8.18.7+
 
 - Creates a Data Type with a Default Value (used for properties that cannot be modified)
 
@@ -11,13 +11,13 @@ There can be plenty of other reasons to add a "cannot be modified" property to a
 ![Imgur](https://i.imgur.com/LQTGJ5F.png)
 ![Imgur](https://i.imgur.com/1N41CY3.png)
 ![Imgur](https://i.imgur.com/PapRvV3.png)
-![Imgur](https://i.imgur.com/i62whEG.png)
+![Imgur](https://i.imgur.com/2DWgL0J.png)
 
 Visit the [Project Page](https://our.umbraco.org/projects/backoffice-extensions/default-value/) in the Umbraco Community
 
 Install via nuget
 
-		Install-Package SplatDev.Umbraco.Plugins.DefaultValue -Version 8.18.7.1
+		Install-Package SplatDev.Umbraco.Plugins.DefaultValue
 
 ##### Specs
 - Value Type: TEXT

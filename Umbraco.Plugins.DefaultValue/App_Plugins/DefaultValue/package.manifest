@@ -1,12 +1,12 @@
 {
   "propertyEditors": [
     {
-      "alias": "DefaultValue",
+      "alias": "splatDev.DefaultValue",
       "name": "Default Value",
-      "hideLabel": false,
       "icon": "icon-info",
       "group": "Common",
       "editor": {
+        "hideLabel": false,
         "view": "~/App_Plugins/DefaultValue/views/view.html",
         "valueType": "TEXT"
       },
