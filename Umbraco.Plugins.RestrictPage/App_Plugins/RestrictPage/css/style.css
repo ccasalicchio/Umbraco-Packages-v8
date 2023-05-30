@@ -10,15 +10,13 @@
     border-radius: 4px;
     box-sizing: border-box; }
     .restrict-page .restricted-label.true {
-        background: #ff9800;
-        color: #f2f2f2;
-    }
+      background: #92163a;
+      color: #f2f2f2; }
       .restrict-page .restricted-label.true i {
         color: #f3f3f3; }
     .restrict-page .restricted-label.false {
-        background: #1b264f;
-        color: #fff;
-    }
+      background: #39d38b;
+      color: #fff; }
       .restrict-page .restricted-label.false i {
         color: #fff; }
   .restrict-page .restrictedswitch {

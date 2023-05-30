@@ -6,7 +6,7 @@
       "icon": "icon-lock",
       "group": "Common",
       "editor": {
-        "hideLabel": false,
+        "hideLabel": true,
         "view": "~/App_Plugins/RestrictPage/views/view.html",
         "valueType": "INT"
       }

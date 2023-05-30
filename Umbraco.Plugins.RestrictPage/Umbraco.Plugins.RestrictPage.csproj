@@ -45,6 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Plugins\RestrictPage\css\style.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="LICENSE" />
     <None Include="README.md" />
     <None Include="Umbraco.Plugins.RestrictPage.nuspec" />
