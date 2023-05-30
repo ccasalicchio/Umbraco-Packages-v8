@@ -6,7 +6,7 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "99e7ce3c76f0acd5")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "efe0cb5d5ea1902c")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -62,11 +62,39 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Channels
+		/// Copy
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
-		[ImplementPropertyType("channels")]
-		public virtual string Channels => this.Value<string>("channels");
+		[ImplementPropertyType("copy")]
+		public virtual object Copy => this.Value("copy");
+
+		///<summary>
+		/// Property A
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("propertyA")]
+		public virtual string PropertyA => this.Value<string>("propertyA");
+
+		///<summary>
+		/// Property B
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("propertyB")]
+		public virtual string PropertyB => this.Value<string>("propertyB");
+
+		///<summary>
+		/// Property C
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("propertyC")]
+		public virtual string PropertyC => this.Value<string>("propertyC");
+
+		///<summary>
+		/// Property D
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("propertyD")]
+		public virtual string PropertyD => this.Value<string>("propertyD");
 	}
 
 	/// <summary>Folder</summary>

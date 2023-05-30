@@ -10,5 +10,13 @@
   {
     "outputFile": "App_Plugins/CharLimitRestrict/css/style.css",
     "inputFile": "App_Plugins/CharLimitRestrict/css/style.scss"
+  },
+  {
+    "outputFile": "App_Plugins/DefaultValue/css/style.css",
+    "inputFile": "App_Plugins/DefaultValue/css/style.scss"
+  },
+  {
+    "outputFile": "App_Plugins/CopyValue/css/style.css",
+    "inputFile": "App_Plugins/CopyValue/css/style.scss"
   }
 ]

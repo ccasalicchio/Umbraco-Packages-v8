@@ -424,9 +424,6 @@
     <Reference Include="Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Web.8.18.8\lib\net472\Umbraco.ModelsBuilder.Embedded.dll</HintPath>
     </Reference>
-    <Reference Include="Umbraco.Plugins.RestrictPage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SplatDev.Umbraco.Plugins.RestrictPage.8.18.8.1\lib\net472\Umbraco.Plugins.RestrictPage.dll</HintPath>
-    </Reference>
     <Reference Include="Umbraco.Web, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Web.8.18.8\lib\net472\Umbraco.Web.dll</HintPath>
     </Reference>
@@ -443,12 +440,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\RestrictPage\css\style.css" />
-    <Content Include="App_Plugins\RestrictPage\css\style.min.css" />
-    <Content Include="App_Plugins\RestrictPage\js\controller.js" />
-    <Content Include="App_Plugins\RestrictPage\lang\en-US.xml" />
-    <Content Include="App_Plugins\RestrictPage\lang\pt-BR.xml" />
-    <Content Include="App_Plugins\RestrictPage\views\view.html" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -470,8 +461,6 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
-    <Content Include="icon.png" />
-    <Content Include="readme.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -501,7 +490,6 @@
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
     <Content Include="Umbraco.md" />
     <Content Include="compilerconfig.json" />
-    <Content Include="App_Plugins\RestrictPage\package.manifest" />
     <None Include="compilerconfig.json.defaults" />
     <Content Include="App_Data\packages\createdPackages.config" />
     <None Include="packages.config" />
