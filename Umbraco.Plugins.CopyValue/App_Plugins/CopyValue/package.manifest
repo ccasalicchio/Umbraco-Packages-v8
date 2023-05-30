@@ -1,13 +1,13 @@
 {
   "propertyEditors": [
     {
-      "alias": "CopyValue",
+      "alias": "splatDev.CopyValue",
       "name": "Copy Value From A To B",
       "icon": "icon-layers",
       "group": "Common",
       "editor": {
         "view": "~/App_Plugins/CopyValue/views/view.html",
-        "hideLabel": false
+        "hideLabel": true
       },
       "prevalues": {
         "fields": [

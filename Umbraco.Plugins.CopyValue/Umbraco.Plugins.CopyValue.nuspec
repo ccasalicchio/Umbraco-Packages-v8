@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>SplatDev.Umbraco.Plugins.CopyValue</id>
-    <version>2.0.1.0</version>
+    <version>8.18.8.1</version>
     <title>Copy Value</title>
     <authors>SplatDev Ltda</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://our.umbraco.com/packages/website-utilities/copy-value/</projectUrl>
-    <description>This Property Editor is a simple copy button that copies one or many values from a property into another property. Useful when you have more than one property with the same purpose, but that may or may not be the same value. Minimizes duplication of work. Ex. When you want an article title to replicate into the meta title. Umbraco v7.15.10</description>
-    <releaseNotes>Added working functionality for copy value and backOffice</releaseNotes>
+    <description>This Property Editor is a simple copy button that copies one or many values from a property into another property. Useful when you have more than one property with the same purpose, but that may or may not be the same value. Minimizes duplication of work. Ex. When you want an article title to replicate into the meta title. Umbraco v8.18.8</description>
+    <releaseNotes>migrated to v8</releaseNotes>
     <copyright>Copyright ©2023 SplatDev</copyright>
     <tags>umbraco copy value</tags>
     <icon>\App_Plugins\CopyValue\icon.png</icon>

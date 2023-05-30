@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <language alias="en_us" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
   <creator>
-    <name>Carlos Casalicchio</name>
-    <link>http://www.ccasalicchio.com</link>
+    <name>SplatDev Ltda</name>
+    <link>https://www.splatdev.com</link>
   </creator>
   <area alias="copyvalue">
     <key alias="button">Copy</key>
     <key alias="done">Data copied sucessfully!</key>
+    <key alias="from">from</key>
+    <key alias="to">to</key>
   </area>
 </language>

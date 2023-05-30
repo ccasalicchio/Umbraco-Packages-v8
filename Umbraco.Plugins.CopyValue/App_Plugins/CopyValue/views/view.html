@@ -1,4 +1,14 @@
 <div ng-controller="splatDev.CopyValue.Controller as vm" class="copy-value" ng-disabled="vm.done">
+    <div class="prop-list">
+        <ul class="list-from">
+            <li><div class="cell cell-header"><localize key="copyvalue_from"></localize></div></li>
+            <li ng-repeat="prop in vm.display.from track by $index"><div class="cell">{{prop}}</div></li>
+        </ul>
+        <ul class="list-to">
+            <li><div class="cell cell-header"><localize key="copyvalue_to"></localize></div></li>
+            <li ng-repeat="prop in vm.display.to track by $index"><div class="cell">{{prop}}</div></li>
+        </ul>
+    </div>
     <div class="button" ng-click="vm.copy()" ng-class="{'done':vm.done}" >
         <span ng-if="!vm.done">
             <localize key="copyvalue_button">COPY</localize>
