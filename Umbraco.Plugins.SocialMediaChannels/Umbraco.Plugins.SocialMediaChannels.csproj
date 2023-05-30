@@ -291,44 +291,18 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="App_Plugins\SocialMediaChannels\css\style.scss" />
-    <None Include="App_Plugins\SocialMediaChannels\package.manifest" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\circle-social\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\flat\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\freesocial\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\geekly\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\glossy\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\hex\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\minimal\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\mini\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\outline\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\retina\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\rounded\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\shadow-flat\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\simple-squared\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\social\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\somacro\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\somicro\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\vintage-retro\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\vintage-round\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\web-social\Web.config" />
-    <None Include="App_Plugins\SocialMediaChannels\themes\Web.config" />
     <None Include="LICENSE" />
     <None Include="packages.config" />
     <None Include="README.md" />
     <None Include="Umbraco.Plugins.SocialMediaChannels.nuspec" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\SocialMediaChannels\package.manifest" />
     <Content Include="App_Plugins\SocialMediaChannels\css\style.css" />
     <Content Include="App_Plugins\SocialMediaChannels\css\style.min.css" />
     <Content Include="App_Plugins\SocialMediaChannels\js\controller.js" />
     <Content Include="App_Plugins\SocialMediaChannels\lang\en-US.xml" />
     <Content Include="App_Plugins\SocialMediaChannels\lang\pt-BR.xml" />
-    <Content Include="App_Plugins\SocialMediaChannels\screenshots\Screenshot_1.png" />
-    <Content Include="App_Plugins\SocialMediaChannels\screenshots\Screenshot_2.png" />
-    <Content Include="App_Plugins\SocialMediaChannels\screenshots\Screenshot_3.png" />
-    <Content Include="App_Plugins\SocialMediaChannels\screenshots\Screenshot_4.png" />
-    <Content Include="App_Plugins\SocialMediaChannels\screenshots\Screenshot_5.png" />
-    <Content Include="App_Plugins\SocialMediaChannels\screenshots\Screenshot_6.png" />
     <Content Include="App_Plugins\SocialMediaChannels\themes\circle-social.jpg" />
     <Content Include="App_Plugins\SocialMediaChannels\themes\circle-social\circle-social.xml" />
     <Content Include="App_Plugins\SocialMediaChannels\themes\circle-social\Circle.xml" />
@@ -662,7 +636,6 @@
     <Content Include="App_Plugins\SocialMediaChannels\themes\outline\xbox.png" />
     <Content Include="App_Plugins\SocialMediaChannels\themes\outline\youtube.png" />
     <Content Include="App_Plugins\SocialMediaChannels\themes\outline\zerply.png" />
-    <Content Include="App_Plugins\SocialMediaChannels\themes\Preview Urls.txt" />
     <Content Include="App_Plugins\SocialMediaChannels\themes\retina.jpg" />
     <Content Include="App_Plugins\SocialMediaChannels\themes\retina\behance.png" />
     <Content Include="App_Plugins\SocialMediaChannels\themes\retina\blogger.png" />
@@ -1019,9 +992,7 @@
     <Content Include="App_Plugins\SocialMediaChannels\themes\web-social\yelp.png" />
     <Content Include="App_Plugins\SocialMediaChannels\themes\web-social\youtube.png" />
     <Content Include="App_Plugins\SocialMediaChannels\views\view.html" />
-    <Content Include="files.txt" />
     <Content Include="icon.png" />
-    <Content Include="Preview Urls.txt" />
     <Content Include="readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
